@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		032DE7010000105567DCD54D /* Pods_Telstra_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A134CAC52E6CE70F93BCB2 /* Pods_Telstra_Assignment.framework */; };
 		C3467A4A21F5F7DC002C4435 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3467A4921F5F7DC002C4435 /* AppDelegate.swift */; };
-		C3467A4C21F5F7DC002C4435 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3467A4B21F5F7DC002C4435 /* ViewController.swift */; };
 		C3467A5121F5F7DD002C4435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3467A5021F5F7DD002C4435 /* Assets.xcassets */; };
 		C3467A5421F5F7DD002C4435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3467A5221F5F7DD002C4435 /* LaunchScreen.storyboard */; };
 		C3467A5F21F5F7DD002C4435 /* Telstra_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3467A5E21F5F7DD002C4435 /* Telstra_AssignmentTests.swift */; };
 		C3467A6A21F5F7DD002C4435 /* Telstra_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3467A6921F5F7DD002C4435 /* Telstra_AssignmentUITests.swift */; };
+		C34A734221F8261A0015A4AD /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A734021F8261A0015A4AD /* DataViewModel.swift */; };
+		C34A734321F8261A0015A4AD /* DynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A734121F8261A0015A4AD /* DynamicType.swift */; };
+		C34A734721F826240015A4AD /* ContentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A734521F826240015A4AD /* ContentData.swift */; };
+		C34A734821F826240015A4AD /* ManagerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A734621F826240015A4AD /* ManagerClass.swift */; };
+		C34A734B21F8262E0015A4AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A734A21F8262E0015A4AD /* ViewController.swift */; };
+		C3F7976721F728F700B07BA5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C3F7976621F728F700B07BA5 /* .swiftlint.yml */; };
 		CE2E437D5E9B0F6899CF68BA /* Pods_Telstra_AssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667EF22C16EBF8223B6464D3 /* Pods_Telstra_AssignmentTests.framework */; };
 		FF19A686E3B5ED318DB93B4E /* Pods_Telstra_AssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC0671E4C309C493839BC7F3 /* Pods_Telstra_AssignmentUITests.framework */; };
 /* End PBXBuildFile section */
@@ -44,7 +49,6 @@
 		9A6CD4DFF5CA6DF1C9D52AD6 /* Pods-Telstra_AssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telstra_AssignmentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Telstra_AssignmentTests/Pods-Telstra_AssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3467A4621F5F7DC002C4435 /* Telstra_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Telstra_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3467A4921F5F7DC002C4435 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C3467A4B21F5F7DC002C4435 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C3467A5021F5F7DD002C4435 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3467A5321F5F7DD002C4435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3467A5521F5F7DD002C4435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +58,12 @@
 		C3467A6521F5F7DD002C4435 /* Telstra_AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Telstra_AssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3467A6921F5F7DD002C4435 /* Telstra_AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Telstra_AssignmentUITests.swift; sourceTree = "<group>"; };
 		C3467A6B21F5F7DD002C4435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C34A734021F8261A0015A4AD /* DataViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
+		C34A734121F8261A0015A4AD /* DynamicType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicType.swift; sourceTree = "<group>"; };
+		C34A734521F826240015A4AD /* ContentData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentData.swift; sourceTree = "<group>"; };
+		C34A734621F826240015A4AD /* ManagerClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerClass.swift; sourceTree = "<group>"; };
+		C34A734A21F8262E0015A4AD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C3F7976621F728F700B07BA5 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		CC0671E4C309C493839BC7F3 /* Pods_Telstra_AssignmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Telstra_AssignmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A134CAC52E6CE70F93BCB2 /* Pods_Telstra_Assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Telstra_Assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB384EB8937EEB3A148C582 /* Pods-Telstra_Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telstra_Assignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Telstra_Assignment/Pods-Telstra_Assignment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,11 +145,10 @@
 		C3467A4821F5F7DC002C4435 /* Telstra_Assignment */ = {
 			isa = PBXGroup;
 			children = (
-				C3467A4921F5F7DC002C4435 /* AppDelegate.swift */,
-				C3467A4B21F5F7DC002C4435 /* ViewController.swift */,
-				C3467A5021F5F7DD002C4435 /* Assets.xcassets */,
-				C3467A5221F5F7DD002C4435 /* LaunchScreen.storyboard */,
-				C3467A5521F5F7DD002C4435 /* Info.plist */,
+				C34A734921F8262E0015A4AD /* ViewControllers */,
+				C34A734421F826240015A4AD /* Models */,
+				C34A733F21F8261A0015A4AD /* ViewModel */,
+				C3F7976921F7296800B07BA5 /* SupportingFiles */,
 			);
 			path = Telstra_Assignment;
 			sourceTree = "<group>";
@@ -160,6 +169,44 @@
 				C3467A6B21F5F7DD002C4435 /* Info.plist */,
 			);
 			path = Telstra_AssignmentUITests;
+			sourceTree = "<group>";
+		};
+		C34A733F21F8261A0015A4AD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C34A734021F8261A0015A4AD /* DataViewModel.swift */,
+				C34A734121F8261A0015A4AD /* DynamicType.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C34A734421F826240015A4AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C34A734521F826240015A4AD /* ContentData.swift */,
+				C34A734621F826240015A4AD /* ManagerClass.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C34A734921F8262E0015A4AD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C34A734A21F8262E0015A4AD /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C3F7976921F7296800B07BA5 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C3467A5221F5F7DD002C4435 /* LaunchScreen.storyboard */,
+				C3467A5521F5F7DD002C4435 /* Info.plist */,
+				C3467A5021F5F7DD002C4435 /* Assets.xcassets */,
+				C3F7976621F728F700B07BA5 /* .swiftlint.yml */,
+				C3467A4921F5F7DC002C4435 /* AppDelegate.swift */,
+			);
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F7976721F728F700B07BA5 /* .swiftlint.yml in Resources */,
 				C3467A5421F5F7DD002C4435 /* LaunchScreen.storyboard in Resources */,
 				C3467A5121F5F7DD002C4435 /* Assets.xcassets in Resources */,
 			);
@@ -382,7 +430,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3467A4C21F5F7DC002C4435 /* ViewController.swift in Sources */,
+				C34A734B21F8262E0015A4AD /* ViewController.swift in Sources */,
+				C34A734821F826240015A4AD /* ManagerClass.swift in Sources */,
+				C34A734321F8261A0015A4AD /* DynamicType.swift in Sources */,
+				C34A734721F826240015A4AD /* ContentData.swift in Sources */,
+				C34A734221F8261A0015A4AD /* DataViewModel.swift in Sources */,
 				C3467A4A21F5F7DC002C4435 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
