@@ -1,5 +1,5 @@
 //
-//  CollectionViewController.swift
+//  ViewController.swift
 //  Telstra_Assignment
 //
 //  Created by mac_admin on 1/21/19.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CollectionViewController: UIViewController {
+class ViewController: UIViewController {
     
     private let collectionView: UICollectionView
     
@@ -53,20 +53,19 @@ class CollectionViewController: UIViewController {
     }
 }
 
-extension CollectionViewController: UICollectionViewDataSource {
+extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 20
     }
     
 func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
-        cell.set(title: "Cell-\(indexPath.item)")
         return cell
     }
     
 }
 
-extension CollectionViewController: UICollectionViewDelegate {
+extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("tap cell index: \(indexPath.item)")
     }
