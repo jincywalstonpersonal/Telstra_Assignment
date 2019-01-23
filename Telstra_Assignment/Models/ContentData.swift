@@ -9,11 +9,11 @@
 import Foundation
 import ObjectMapper
 
-class listResponse: Mappable {
+class ListResponse: Mappable {
     var title: String?
     var rows: [Details]?
     
-    required init?(map: Map){
+    required init?(map: Map) {
         
     }
     
@@ -28,7 +28,7 @@ class Details: Mappable {
     var description: String?
     var imageHref: String?
     
-    required init?(map: Map){
+    required init?(map: Map) {
         
     }
     

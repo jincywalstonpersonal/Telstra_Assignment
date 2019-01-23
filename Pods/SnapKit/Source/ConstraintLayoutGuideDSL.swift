@@ -27,19 +27,18 @@
     import AppKit
 #endif
 
-
 @available(iOS 9.0, *)
 public struct ConstraintLayoutGuideDSL: ConstraintAttributesDSL {
-    
+
     public var target: AnyObject? {
         return self.guide
     }
-    
+
     internal let guide: ConstraintLayoutGuide
-    
+
     internal init(guide: ConstraintLayoutGuide) {
         self.guide = guide
-        
+
     }
-    
+
 }

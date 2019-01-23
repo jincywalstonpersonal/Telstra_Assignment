@@ -27,27 +27,26 @@
     import AppKit
 #endif
 
-
 public class ConstraintMakerPriortizable: ConstraintMakerFinalizable {
-    
+
     @discardableResult
     public func priority(_ amount: ConstraintPriorityTarget) -> ConstraintMakerFinalizable {
         self.description.priority = amount
         return self
     }
-    
+
     @available(*, deprecated:3.0, message:"Use priority(_ amount: ConstraintPriorityTarget) instead.")
     @discardableResult
     public func priorityRequired() -> ConstraintMakerFinalizable {
         return self.priority(1000)
     }
-    
+
     @available(*, deprecated:3.0, message:"Use priority(_ amount: ConstraintPriorityTarget) instead.")
     @discardableResult
     public func priorityHigh() -> ConstraintMakerFinalizable {
         return self.priority(750)
     }
-    
+
     @available(*, deprecated:3.0, message:"Use priority(_ amount: ConstraintPriorityTarget) instead.")
     @discardableResult
     public func priorityMedium() -> ConstraintMakerFinalizable {
@@ -57,11 +56,11 @@ public class ConstraintMakerPriortizable: ConstraintMakerFinalizable {
             return self.priority(501)
         #endif
     }
-    
+
     @available(*, deprecated:3.0, message:"Use priority(_ amount: ConstraintPriorityTarget) instead.")
     @discardableResult
     public func priorityLow() -> ConstraintMakerFinalizable {
         return self.priority(250)
     }
-    
+
 }
