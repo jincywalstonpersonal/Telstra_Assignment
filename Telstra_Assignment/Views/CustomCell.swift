@@ -9,6 +9,7 @@ import UIKit
 
 class CustomCell: UICollectionViewCell {
     private let label = UILabel()
+    private let image = UIImageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)

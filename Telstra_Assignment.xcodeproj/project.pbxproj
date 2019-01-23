@@ -19,6 +19,8 @@
 		C34A734821F826240015A4AD /* ManagerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A734621F826240015A4AD /* ManagerClass.swift */; };
 		C34A734B21F8262E0015A4AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A734A21F8262E0015A4AD /* ViewController.swift */; };
 		C34A735021F82B600015A4AD /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A734F21F82B600015A4AD /* CustomCell.swift */; };
+		C34A739721F8A6A10015A4AD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A739621F8A6A10015A4AD /* DetailViewController.swift */; };
+		C34A739921F8A6BB0015A4AD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A739821F8A6BB0015A4AD /* DetailView.swift */; };
 		CE2E437D5E9B0F6899CF68BA /* Pods_Telstra_AssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667EF22C16EBF8223B6464D3 /* Pods_Telstra_AssignmentTests.framework */; };
 		FF19A686E3B5ED318DB93B4E /* Pods_Telstra_AssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC0671E4C309C493839BC7F3 /* Pods_Telstra_AssignmentUITests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +66,8 @@
 		C34A734621F826240015A4AD /* ManagerClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerClass.swift; sourceTree = "<group>"; };
 		C34A734A21F8262E0015A4AD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C34A734F21F82B600015A4AD /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		C34A739621F8A6A10015A4AD /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C34A739821F8A6BB0015A4AD /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		CC0671E4C309C493839BC7F3 /* Pods_Telstra_AssignmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Telstra_AssignmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A134CAC52E6CE70F93BCB2 /* Pods_Telstra_Assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Telstra_Assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB384EB8937EEB3A148C582 /* Pods-Telstra_Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Telstra_Assignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Telstra_Assignment/Pods-Telstra_Assignment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				C34A734A21F8262E0015A4AD /* ViewController.swift */,
+				C34A739621F8A6A10015A4AD /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 		C34A734C21F827580015A4AD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C34A739821F8A6BB0015A4AD /* DetailView.swift */,
 				C34A734F21F82B600015A4AD /* CustomCell.swift */,
 			);
 			path = Views;
@@ -361,16 +367,12 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -453,12 +455,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34A735021F82B600015A4AD /* CustomCell.swift in Sources */,
+				C34A739921F8A6BB0015A4AD /* DetailView.swift in Sources */,
 				C34A734B21F8262E0015A4AD /* ViewController.swift in Sources */,
 				C34A734821F826240015A4AD /* ManagerClass.swift in Sources */,
 				C34A734321F8261A0015A4AD /* DynamicType.swift in Sources */,
 				C34A734721F826240015A4AD /* ContentData.swift in Sources */,
 				C34A734221F8261A0015A4AD /* DataViewModel.swift in Sources */,
 				C3467A4A21F5F7DC002C4435 /* AppDelegate.swift in Sources */,
+				C34A739721F8A6A10015A4AD /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

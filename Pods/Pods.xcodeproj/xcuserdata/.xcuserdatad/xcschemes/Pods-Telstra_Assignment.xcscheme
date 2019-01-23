@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B94717A425430D004BEB4BDA8A818288"
+               BlueprintIdentifier = "8C6806D4C1F68509597150694B7B64FC"
                BlueprintName = "Pods-Telstra_Assignment"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "Pods-Telstra_Assignment.framework">

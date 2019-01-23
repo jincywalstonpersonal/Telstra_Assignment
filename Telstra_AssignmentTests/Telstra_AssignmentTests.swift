@@ -7,9 +7,11 @@
 //
 
 import XCTest
+
 @testable import Telstra_Assignment
 
 class Telstra_AssignmentTests: XCTestCase {
+var vcController: viewController?
 
     override func setUp() {
         super.setUp()
@@ -32,5 +34,7 @@ class Telstra_AssignmentTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
+    func testViewDidLoad(){
+        XCTAssert(vcController?.viewDidLoad() == nil, "CollectionView Loaded")
+    }
 }

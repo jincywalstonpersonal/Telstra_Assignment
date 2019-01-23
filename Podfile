@@ -13,8 +13,6 @@ target 'Telstra_Assignment' do
   use_frameworks!
   pod 'AlamofireObjectMapper', '~> 4' 
   pod 'SwiftLint' 
-  pod 'SnapKit', '~> 3.0.0'
-  pod 'SDWebImage', '~> 4.0' 
     # Pods for Telstra_Assignment
 
   target 'Telstra_AssignmentTests' do
