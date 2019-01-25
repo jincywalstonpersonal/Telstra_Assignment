@@ -12,7 +12,12 @@ class ViewController: UIViewController {
     
     private let collectionView: UICollectionView
     var refreshControl: UIRefreshControl!
-
+    var values: [ListResponse]?
+    var details: [Details]?
+    var isWating = true
+    var  pageNumber  = 0
+    
+    
     init() {
         let layout = UICollectionViewFlowLayout()
         
@@ -40,7 +45,7 @@ class ViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        // you have to register cell before dequeue
+        //To register cell before dequeue
         collectionView.register(CustomCell.self, forCellWithReuseIdentifier: "CustomCell")
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -50,29 +55,49 @@ class ViewController: UIViewController {
             collectionView.rightAnchor.constraint(equalTo: view.rightAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             ])
-
-    //refresh control
-    self.refreshControl = UIRefreshControl()
-    self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-    self.refreshControl.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
-    collectionView.addSubview(refreshControl)
+        //Server Request
+        DataViewModel.fetchData(self)
+        
+        //Refresh control
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
+        collectionView.addSubview(refreshControl)
+        
+    }
     
-}
-
-//pull to refresh function
-
-func refresh(sender: AnyObject) {
-    collectionView.reloadData()
-}
+    //pull to refresh function
+    
+    func refresh(sender: AnyObject) {
+        collectionView.reloadData()
+        DataViewModel.fetchData(self)
+    }
+    
+    func doPaging() {
+        // call the API in this block and after getting the response then
+        
+        DataViewModel.fetchData(self)
+        collectionView.reloadData()
+        self.isWating = false // it’s means paging is done and user can able request another page request by scrolling the tableview at the bottom.
+        
+    }
 }
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return (values?.count)!
     }
     
-func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        if indexPath.item == (self.values?.count)! - 2 && !isWating {
+            isWating = true
+            self.pageNumber += 1
+            self.doPaging()
+        }
+        cell.setImage(url: (details?[indexPath.item].imageHref)!)
+        cell.set(title: (values?[indexPath.item].title)!)
+        
         return cell
     }
     
@@ -84,6 +109,7 @@ extension ViewController: UICollectionViewDelegate {
         let detailViewController = DetailViewController()
         
         detailViewController.modalPresentationStyle = .custom
+        
         present(detailViewController, animated: true, completion: nil)
     }
 }

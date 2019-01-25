@@ -12,6 +12,7 @@ class DataViewModel {
     var listResponse: DynamicType<ListResponse> = DynamicType<ListResponse>()
     var details: DynamicType<Details> = DynamicType()
     var error: DynamicType<Error> = DynamicType()
+
   //Fetch Data
 func fetchData() {
     ManagerClass.sharedInstance.fetchData { (details, error) in
