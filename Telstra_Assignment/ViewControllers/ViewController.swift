@@ -8,14 +8,11 @@
 
 import Foundation
 import UIKit
-
-
 class ViewController: UIViewController {
     
     private let collectionView: UICollectionView
     var refreshControl: UIRefreshControl!
 
-    
     init() {
         let layout = UICollectionViewFlowLayout()
         
@@ -53,9 +50,7 @@ class ViewController: UIViewController {
             collectionView.rightAnchor.constraint(equalTo: view.rightAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             ])
-    
-    
-    
+
     //refresh control
     self.refreshControl = UIRefreshControl()
     self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
