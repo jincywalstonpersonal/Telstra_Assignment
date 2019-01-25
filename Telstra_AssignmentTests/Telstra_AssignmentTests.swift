@@ -11,26 +11,28 @@ import XCTest
 @testable import Telstra_Assignment
 
 class Telstra_AssignmentTests: XCTestCase {
-var vcController: ViewController?
-var sessionUnderTest: URLSession!
-
+    var vcController: ViewController?
+    var sessionUnderTest: URLSession!
+    private var cell: CustomCell?
+    
     override func setUp() {
         super.setUp()
         sessionUnderTest = URLSession(configuration: URLSessionConfiguration.default)
         // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
+    }
+    
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         sessionUnderTest = nil
         super.tearDown()
         
     }
+     // Viewcontroller test: Collecion view is loaded or not
     
     func testViewDidLoad(){
         XCTAssert(vcController?.viewDidLoad() == nil, "CollectionView Loaded")
     }
-
+    
     // Asynchronous test: success fast, failure slow
     func testValidCallToGetsHTTPStatusCode200() {
         // given
