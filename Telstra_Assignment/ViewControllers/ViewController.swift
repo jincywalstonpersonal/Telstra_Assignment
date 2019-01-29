@@ -109,9 +109,7 @@ extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("tap cell index: \(indexPath.item)")
         let detailViewController = DetailViewController()
-        
         detailViewController.modalPresentationStyle = .custom
-        
         present(detailViewController, animated: true, completion: nil)
     }
 }
