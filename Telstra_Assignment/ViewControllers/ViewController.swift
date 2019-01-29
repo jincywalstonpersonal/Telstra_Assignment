@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     private let collectionView: UICollectionView
     var refreshControl: UIRefreshControl!
+    var listDataModel:DataViewModel = DataViewModel()
     var values: [ListResponse]?
     var details: [Details]?
     var isWating = true
@@ -39,6 +40,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Server Request
+        listDataModel.fetchData()
+        
         view.addSubview(collectionView)
         
         collectionView.backgroundColor = .lightGray
@@ -55,8 +59,6 @@ class ViewController: UIViewController {
             collectionView.rightAnchor.constraint(equalTo: view.rightAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             ])
-        //Server Request
-        DataViewModel.fetchData(self)
         
         //Refresh control
         self.refreshControl = UIRefreshControl()
@@ -70,13 +72,13 @@ class ViewController: UIViewController {
     
     func refresh(sender: AnyObject) {
         collectionView.reloadData()
-        DataViewModel.fetchData(self)
+        listDataModel.fetchData()
     }
     
     func doPaging() {
         // call the API in this block and after getting the response then
         
-        DataViewModel.fetchData(self)
+        listDataModel.fetchData()
         collectionView.reloadData()
         self.isWating = false // it’s means paging is done and user can able request another page request by scrolling the tableview at the bottom.
         
