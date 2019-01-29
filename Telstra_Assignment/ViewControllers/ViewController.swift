@@ -12,12 +12,11 @@ class ViewController: UIViewController {
     
     private let collectionView: UICollectionView
     var refreshControl: UIRefreshControl!
-    var listDataModel:DataViewModel = DataViewModel()
+    var listDataModel: DataViewModel = DataViewModel()
     var values: [ListResponse]?
     var details: [Details]?
     var isWating = true
     var  pageNumber  = 0
-    
     
     init() {
         let layout = UICollectionViewFlowLayout()

@@ -20,7 +20,7 @@ class CustomCell: UICollectionViewCell {
         contentView.backgroundColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 18)
         label.textAlignment = .center
-       //Set Autolaout
+       //Set Autolayout
         label.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -48,6 +48,6 @@ class CustomCell: UICollectionViewCell {
     
     func setImage(url: String) {
         let urlString = URL.init(string: url)
-        image.sd_setImage(with: urlString , placeholderImage: #imageLiteral(resourceName: "placeholder"))
+        image.sd_setImage(with: urlString, placeholderImage: #imageLiteral(resourceName: "placeholder"))
             }
 }
