@@ -86,12 +86,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if (values?.count)! > 0 {
-         return (values?.count)!
-        } else {
-            return 0
-        }
-       
+        return (values?.count) == nil ? 0 : (values?.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

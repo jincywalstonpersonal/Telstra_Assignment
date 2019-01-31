@@ -13,7 +13,7 @@ class DetailViewController: UIViewController {
     let gradientLayer = CAGradientLayer()
     let  label = String()
     let image = String()
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

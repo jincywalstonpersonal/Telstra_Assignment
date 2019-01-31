@@ -15,7 +15,7 @@ public struct DynamicType<T> {
     private var listeners: Listeners = []
     var value: T? {
         didSet {
-            for (_, observer) in listeners.enumerated() {
+            for observer in listeners {
                 if let value = value {
                     observer(value)
                 }
