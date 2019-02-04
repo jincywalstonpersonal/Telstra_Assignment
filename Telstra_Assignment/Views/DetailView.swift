@@ -10,17 +10,17 @@ import Foundation
 import UIKit
 
 class DetailView: UIView {
-    var label: UILabel!
-    var imageView: UIImageView!
+    var label: UILabel?
+    var imageView: UIImageView?
     
     var caption: String? {
         get { return label?.text }
-        set { label.text = newValue }
+        set { label?.text = newValue }
     }
     
     var image: UIImage? {
-        get { return imageView.image }
-        set { imageView.image = newValue }
+        get { return imageView?.image }
+        set { imageView?.image = newValue }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -38,9 +38,9 @@ class DetailView: UIView {
         // sets the image's frame to fill our view
       
         imageView = UIImageView(frame: bounds)
-        imageView.contentMode = UIViewContentMode.scaleAspectFill
-        imageView.clipsToBounds = true
-        addSubview(imageView)
+        imageView?.contentMode = UIViewContentMode.scaleAspectFill
+        imageView?.clipsToBounds = true
+        addSubview(imageView!)
         
         // caption has translucent grey background 30 points high and span across bottom of view
         let captionBackgroundView = UIView(frame: CGRect(origin: CGPoint(x: 0, y: bounds.height - 30), size: CGSize(width: bounds.width, height: 30)))
@@ -50,7 +50,7 @@ class DetailView: UIView {
         
         label = UILabel(frame: captionBackgroundView.bounds.insetBy(dx: 10, dy: 5))
         
-        label.textColor = UIColor(white: 0.9, alpha: 1.0)
-        captionBackgroundView.addSubview(label)
+        label?.textColor = UIColor(white: 0.9, alpha: 1.0)
+        captionBackgroundView.addSubview(label!)
     }
 }

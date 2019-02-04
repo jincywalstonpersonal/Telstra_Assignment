@@ -5,13 +5,12 @@
 //  Created by mac_admin on 1/21/19.
 //  Copyright © 2019 mac_admin. All rights reserved.
 //
-
 import Foundation
 import UIKit
 class ViewController: UIViewController {
     
     private let collectionView: UICollectionView
-    var refreshControl: UIRefreshControl!
+    var refreshControl: UIRefreshControl?
     var listDataModel: DataViewModel = DataViewModel()
     var values: [ListResponse]?
     var details: [Details]?
@@ -20,37 +19,32 @@ class ViewController: UIViewController {
     
     init() {
         let layout = UICollectionViewFlowLayout()
-        
         // calculate cell size (margin: 5px, column: 3)
         let screenWidth = UIScreen.main.bounds.width
         let cellWidth: CGFloat = (screenWidth - 5 * 2) / 3
         layout.itemSize = CGSize(width: cellWidth, height: cellWidth)
         layout.minimumLineSpacing = 5
         layout.minimumInteritemSpacing = 5
-        
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         super.init(nibName: nil, bundle: nil)
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //Server Request
         listDataModel.fetchData()
         
+        //CollectionView
         view.addSubview(collectionView)
-        
         collectionView.backgroundColor = .lightGray
         collectionView.dataSource = self
         collectionView.delegate = self
         
         //To register cell before dequeue
         collectionView.register(CustomCell.self, forCellWithReuseIdentifier: "CustomCell")
-        
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -58,13 +52,12 @@ class ViewController: UIViewController {
             collectionView.rightAnchor.constraint(equalTo: view.rightAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             ])
-        
+
         //Refresh control
         self.refreshControl = UIRefreshControl()
-        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        self.refreshControl.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
-        collectionView.addSubview(refreshControl)
-        
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
+        collectionView.addSubview(refreshControl!)
     }
     
     //pull to refresh function
@@ -85,23 +78,31 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (values?.count) == nil ? 0 : (values?.count)!
-    }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        guard let value = values else {
+            return 0
+        }
+        return (values?.count) == nil ? 0 : value.count
+    }
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as? CustomCell
+        
         if indexPath.item == (self.values?.count)! - 2 && !isWating {
             isWating = true
             self.pageNumber += 1
             self.doPaging()
         }
-        cell.setImage(url: (details?[indexPath.item].imageHref)!)
-        cell.set(title: (values?[indexPath.item].title)!)
-        
-        return cell
+        if let detail = details?[indexPath.item].imageHref {
+            cell?.setImage(url: detail)
+        }
+        if let value = values?[indexPath.item].title {
+            cell?.set(title: value)
+        }
+        return cell!
     }
-    
 }
 
 extension ViewController: UICollectionViewDelegate {

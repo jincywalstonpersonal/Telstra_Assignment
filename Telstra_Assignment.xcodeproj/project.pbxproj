@@ -12,7 +12,6 @@
 		C3467A5121F5F7DD002C4435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3467A5021F5F7DD002C4435 /* Assets.xcassets */; };
 		C3467A5421F5F7DD002C4435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3467A5221F5F7DD002C4435 /* LaunchScreen.storyboard */; };
 		C3467A5F21F5F7DD002C4435 /* Telstra_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3467A5E21F5F7DD002C4435 /* Telstra_AssignmentTests.swift */; };
-		C3467A6A21F5F7DD002C4435 /* Telstra_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3467A6921F5F7DD002C4435 /* Telstra_AssignmentUITests.swift */; };
 		C34A734221F8261A0015A4AD /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A734021F8261A0015A4AD /* DataViewModel.swift */; };
 		C34A734321F8261A0015A4AD /* DynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A734121F8261A0015A4AD /* DynamicType.swift */; };
 		C34A734721F826240015A4AD /* ContentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34A734521F826240015A4AD /* ContentData.swift */; };
@@ -58,8 +57,6 @@
 		C3467A5E21F5F7DD002C4435 /* Telstra_AssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Telstra_AssignmentTests.swift; sourceTree = "<group>"; };
 		C3467A6021F5F7DD002C4435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3467A6521F5F7DD002C4435 /* Telstra_AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Telstra_AssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3467A6921F5F7DD002C4435 /* Telstra_AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Telstra_AssignmentUITests.swift; sourceTree = "<group>"; };
-		C3467A6B21F5F7DD002C4435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C34A734021F8261A0015A4AD /* DataViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
 		C34A734121F8261A0015A4AD /* DynamicType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicType.swift; sourceTree = "<group>"; };
 		C34A734521F826240015A4AD /* ContentData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentData.swift; sourceTree = "<group>"; };
@@ -129,7 +126,6 @@
 			children = (
 				C3467A4821F5F7DC002C4435 /* Telstra_Assignment */,
 				C3467A5D21F5F7DD002C4435 /* Telstra_AssignmentTests */,
-				C3467A6821F5F7DD002C4435 /* Telstra_AssignmentUITests */,
 				C3467A4721F5F7DC002C4435 /* Products */,
 				7C5E40FE3033EF8960962099 /* Pods */,
 				B990C25D7853D5AD19F7DB93 /* Frameworks */,
@@ -165,15 +161,6 @@
 				C3467A6021F5F7DD002C4435 /* Info.plist */,
 			);
 			path = Telstra_AssignmentTests;
-			sourceTree = "<group>";
-		};
-		C3467A6821F5F7DD002C4435 /* Telstra_AssignmentUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C3467A6921F5F7DD002C4435 /* Telstra_AssignmentUITests.swift */,
-				C3467A6B21F5F7DD002C4435 /* Info.plist */,
-			);
-			path = Telstra_AssignmentUITests;
 			sourceTree = "<group>";
 		};
 		C34A733F21F8261A0015A4AD /* ViewModel */ = {
@@ -429,7 +416,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 		F0955121165EFE2AF13B5A04 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -480,7 +467,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3467A6A21F5F7DD002C4435 /* Telstra_AssignmentUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

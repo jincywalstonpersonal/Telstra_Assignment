@@ -12,7 +12,7 @@ import XCTest
 
 class Telstra_AssignmentTests: XCTestCase {
     var vcController: ViewController?
-    var sessionUnderTest: URLSession!
+    var sessionUnderTest: URLSession?
     private var cell: CustomCell?
     
     override func setUp() {
@@ -30,7 +30,7 @@ class Telstra_AssignmentTests: XCTestCase {
      // Viewcontroller test: Collecion view is loaded or not
     
     func testViewDidLoad(){
-        XCTAssert(vcController?.viewDidLoad() == nil, "CollectionView Loaded")
+        XCTAssert(vcController?.viewDidLoad() == nil, "CollectionView is not loaded")
     }
     
     // Asynchronous test: success fast, failure slow
@@ -41,7 +41,7 @@ class Telstra_AssignmentTests: XCTestCase {
         let promise = expectation(description: "Status code: 200")
         
         // when
-        let dataTask = sessionUnderTest.dataTask(with: url!) { data, response, error in
+        let dataTask = sessionUnderTest?.dataTask(with: url!) { data, response, error in
             // then
             if let error = error {
                 XCTFail("Error: \(error.localizedDescription)")
@@ -55,7 +55,7 @@ class Telstra_AssignmentTests: XCTestCase {
                 }
             }
         }
-        dataTask.resume()
+        dataTask?.resume()
         // 3
         waitForExpectations(timeout: 60, handler: nil)
     }
