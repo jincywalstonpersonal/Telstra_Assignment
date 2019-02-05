@@ -24,7 +24,7 @@ class DetailViewController: UIViewController {
         view.addGestureRecognizer(tapRecognizer)
     }
     
-    func viewTapped() {
+    @objc func viewTapped() {
         dismiss(animated: true, completion: nil)
     }
     

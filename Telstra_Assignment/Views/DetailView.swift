@@ -38,7 +38,7 @@ class DetailView: UIView {
         // sets the image's frame to fill our view
       
         imageView = UIImageView(frame: bounds)
-        imageView?.contentMode = UIViewContentMode.scaleAspectFill
+        imageView?.contentMode = UIView.ContentMode.scaleAspectFill
         imageView?.clipsToBounds = true
         addSubview(imageView!)
         

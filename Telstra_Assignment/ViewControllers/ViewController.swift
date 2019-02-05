@@ -56,13 +56,13 @@ class ViewController: UIViewController {
         //Refresh control
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
+        self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         collectionView.addSubview(refreshControl!)
     }
     
     //pull to refresh function
     
-    func refresh(sender: AnyObject) {
+    @objc func refresh(sender: AnyObject) {
         collectionView.reloadData()
         listDataModel.fetchData()
     }
